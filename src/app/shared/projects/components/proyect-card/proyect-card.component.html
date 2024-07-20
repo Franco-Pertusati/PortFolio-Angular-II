@@ -1,0 +1,35 @@
+<div class="w-full px-32">
+    <div class="flex gap-4">
+        <div class="p-4 wasd flex flex-col">
+            <div class="qwer">
+                <ng-content />
+            </div>
+            <div class="flex gap-2">
+                @if (repo) {
+                    <app-anchor [link]="repo"><i class="bi bi-github"></i><span>Repositorio</span></app-anchor>
+                }
+                @if (landingPage) {
+                <app-anchor [link]="landingPage"><i class="bi bi-link"></i><span>Preview</span></app-anchor>
+                }
+            </div>
+        </div>
+        <div class="cardContainer p-4">
+            <div class="card bg-onyx cursor-pointer" (click)="openDialog()">
+                <div class="tools">
+                    <div class="circle">
+                        <span class="red box"></span>
+                    </div>
+                    <div class="circle">
+                        <span class="yellow box"></span>
+                    </div>
+                    <div class="circle">
+                        <span class="green box"></span>
+                    </div>
+                </div>
+                <div class="card__content h-full p-2 pt-0 overflow-hidden">
+                    <img class="rounded-md h-full" [src]="photo" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
