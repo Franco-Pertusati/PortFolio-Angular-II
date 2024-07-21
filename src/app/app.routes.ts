@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
-import { DialogComponent } from './shared/projects/components/dialog/dialog.component';
+import { BackgroundComponent } from './shared/background/background.component';
 
 export const routes: Routes = [
     {
@@ -9,6 +9,6 @@ export const routes: Routes = [
     },
     {
         path: 'wasd',
-        component: DialogComponent
+        component: BackgroundComponent
     }
 ];
